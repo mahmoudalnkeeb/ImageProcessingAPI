@@ -1,0 +1,24 @@
+<%- include('../templates/header.ejs') %>
+
+<form
+  action="/images/resize"
+  method="post"
+  enctype="multipart/form-data"
+  id="resizeForm"
+  class="container d-flex flex-column justify-content-center align-items-center h-100 w-100 gap-3"
+>
+  <input class="form-control w-50" type="file" id="formFile" name="image" />
+  <div class="w-50 d-flex gap-2">
+    <div class="input-group w-100">
+      <span class="input-group-text">Width</span>
+      <input type="number" class="form-control" id="width" name="width" />
+    </div>
+    <div class="input-group w-100">
+      <span class="input-group-text">Height</span>
+      <input type="number" class="form-control" id="height" name="height" />
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Resize</button>
+</form>
+
+<%- include('../templates/footer.ejs') %>

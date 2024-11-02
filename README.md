@@ -1,30 +1,82 @@
 # ImageProcessingAPI
 
-Image Processing API using express , typeScript , Sharp , and testing with Jasmine
+A RESTful Image Processing API built with Express, TypeScript, and Sharp, featuring testing with Jasmine.
 
 ---
 
-## how to use
+## Getting Started
 
-- to install required modules
+Follow these steps to set up and run the Image Processing API.
 
-  `npm install`
+### Prerequisites
 
-- to build app 
+- Node.js (version 20.18.0 LTS or later)
+- npm (comes with Node.js)
 
-   `npm run build`
+### Installation
 
-- you can use this to build app & run server
+1. **Install Required Modules:**
 
-  `npm run dev`
-- to test app 
+   ```bash
+   npm install
+   ```
 
-  `npm run test`
- 
-- lint
+2. **Build the Application:**
 
-   `npm run lint`
-   
-- prettier
+   ```bash
+   npm run build
+   ```
 
-    `npm run prettier`
+### Running the Application
+
+- **Start the Development Server:**
+
+  ```bash
+  npm run dev
+  ```
+
+### Testing
+
+- **Run Tests:**
+
+  ```bash
+  npm run test
+  ```
+
+### Linting and Formatting
+
+- **Lint the Code:**
+
+  ```bash
+  npm run lint
+  ```
+
+- **Format Code with Prettier:**
+
+  ```bash
+  npm run prettier
+  ```
+
+---
+
+## API Endpoints
+
+### 1. Resize Image
+
+- **Endpoint:** `POST /images/resize`
+- **Description:** Resizes the uploaded image.
+- **Request Body:**
+  - Form-data with key `image`.
+  - Request Body containing `width`, `height`
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

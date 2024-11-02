@@ -1,26 +1,18 @@
 import express from 'express';
+import { newLine } from '../utils/log.utils';
 
-export const logger = (
-    req: express.Request,
-    res: express.Response,
-    next: express.NextFunction
-): void => {
-    const url = req.url;
-    const width = req.query.width;
-    const height = req.query.height;
+function logger(req: express.Request, res: express.Response, next: express.NextFunction): void {
+  const ignoredPaths = ['/', '/favicon.ico'];
+  const url = req.url;
+  console.log(newLine(`path :  ${url} -- is visited`));
 
-    if (req.path == '/') {
-        console.log(`
-        
-        path :  ${url} -- is visited`);
-    } else if (req.path == '/api/images') {
-        console.log(
-            `
+  if (ignoredPaths.includes(req.path)) return next();
 
-        path : ${url} -- is visited
-        size : ${width} × ${height}`
-        );
-    }
+  const query = JSON.stringify(req.query);
+  const path = req.path;
+  console.log(newLine(`path: %s| query: %s`), path, query);
 
-    next();
-};
+  next();
+}
+
+export default logger;
