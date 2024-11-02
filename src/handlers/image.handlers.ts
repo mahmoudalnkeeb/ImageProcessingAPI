@@ -15,9 +15,9 @@ export async function resizeHandler(req: Request, res: Response, next: NextFunct
     }
 
     const { filename, mimetype, buffer, originalname, size } = req.file;
-    const resizedImage = await resizeImage(buffer, +width, +height);
+    const resizedImage = resizeImage(buffer, +width, +height);
     res.set('Content-Type', mimetype);
-    res.send(resizedImage)
+    resizedImage.pipe(res);
   } catch (error) {
     next(error);
   }

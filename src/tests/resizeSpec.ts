@@ -1,14 +1,13 @@
 import path from 'path';
+import fs from 'fs';
+import sharp from 'sharp';
 import { resizeImage } from '../utils/sharp.utils';
-const appDir = process.cwd();
 
-let image = path.normalize(path.join(appDir, `/assets/images/fjord.jpg`));
-let resizePath = path.normalize(path.join(appDir, `/assets/thumps/fjord1.jpg`));
+const image = path.normalize(path.join(process.cwd(), `/assets/test/test.jpg`));
 
 describe('Image Processing API', () => {
-  it("shouldn't return err", () => {
-    resizeImage(Buffer.from([]) ,300, 300).catch((err) => {
-      expect(err).toBeFalsy();
-    });
+  it('should be instance of Sharp', () => {
+    const imageBuffer = fs.readFileSync(image);
+    expect(resizeImage(imageBuffer, 300, 300)).toBeInstanceOf(sharp);
   });
 });
