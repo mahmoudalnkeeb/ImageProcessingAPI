@@ -59,15 +59,19 @@ Follow these steps to set up and run the Image Processing API.
 
 ---
 
-## API Endpoints
+## Todos and Future Improvements
 
-### 1. Resize Image
+- Development
 
-- **Endpoint:** `POST /images/resize`
-- **Description:** Resizes the uploaded image.
-- **Request Body:**
-  - Form-data with key `image`.
-  - Request Body containing `width`, `height`
+  - [ ] unit testing with Jest.
+  - [ ] Pipline for CI/CD with GitHub Actions.
+
+- Features
+
+  - [ ] Add more image processing operations!
+  - [ ] Add progress tracking for image processing operations.
+  - [ ] bulk image processing operations.
+  - [ ] Pipline image processing operations.
 
 ---
 

@@ -1,44 +1,42 @@
 {
-    "name": "ts_jasmine_node",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build": "npx tsc",
-        "dev": "nodemon --watch ./src/index.ts --exec \"npm run build && node build/index.js\"",
-        "jasmine": "jasmine",
-        "test": "npm run build && npm run jasmine",
-        "format": "prettier --write ./src/**/*.ts",
-        "lint": "eslint .eslintrc.js src/**/*.ts"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@types/express": "^5.0.0",
-        "@types/jasmine": "^5.1.4",
-        "@types/multer": "^1.4.12",
-        "@types/node": "^22.8.6",
-        "@types/prettier": "^3.0.0",
-        "@types/sharp": "^0.32.0",
-        "@types/supertest": "^6.0.2",
-        "@typescript-eslint/eslint-plugin": "^8.12.2",
-        "@typescript-eslint/parser": "^8.12.2",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.2.1",
-        "jasmine": "^5.4.0",
-        "jasmine-spec-reporter": "^7.0.0",
-        "nodemon": "^3.1.7",
-        "prettier": "^3.3.3",
-        "supertest": "^7.0.0",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.6.3"
-    },
-    "dependencies": {
-        "ejs": "^3.1.10",
-        "express": "^4.21.1",
-        "joi": "^17.13.3",
-        "multer": "^1.4.5-lts.1",
-        "sharp": "^0.33.5"
-    }
+  "name": "ts_jasmine_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "nodemon --watch ./src/index.ts --exec \"npm run build && node build/index.js\"",
+    "test": "jest",
+    "format": "prettier --write ./src/**/*.ts",
+    "lint": "eslint .eslintrc.js src/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jasmine": "^5.1.4",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.8.6",
+    "@types/prettier": "^3.0.0",
+    "@types/sharp": "^0.32.0",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.5"
+  }
 }
